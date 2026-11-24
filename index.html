@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Boa noite, coelhinho e tulipa</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 56'%3E%3Cpath d='M20 30V54' stroke='%236fd3a0' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M20 51C10 49 7 41 8 34c8 2 12 8 12 17z' fill='%233fae82'/%3E%3Cpath d='M7 11c0 13 5 21 13 21s13-8 13-21c-4 3-9 1-13-5-4 6-9 8-13 5z' fill='%23ff7eb6'/%3E%3Cpath d='M14 9c-1 9 1 17 6 23C12 32 7 24 7 11c3 1 5 0 7-2z' fill='%23ff4f98'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;1,300;1,500&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg"></canvas><canvas id="sky"></canvas>
+<main>
+  <h1>Boa noite</h1>
+  <div class="orn"><i></i><img id="orn" alt=""><i></i></div>
+  <p class="sub">O coelhinho quer dormir ao lado de uma tulipa. Ajude-o a atravessar o jardim.</p>
+  <div class="card">
+    <img class="corner a fl" alt=""><img class="corner b fl" alt=""><img class="corner c fl" alt=""><img class="corner d fl" alt="">
+    <div id="maze" aria-label="Labirinto do coelhinho"></div>
+  </div>
+  <div class="hud"><span>passos</span><b id="steps">0</b></div>
+  <div class="pad" role="group" aria-label="Controle">
+    <button class="u" data-d="u" aria-label="Cima"></button>
+    <button class="l" data-d="l" aria-label="Esquerda"></button>
+    <div class="mid"></div>
+    <button class="r" data-d="r" aria-label="Direita"></button>
+    <button class="d" data-d="d" aria-label="Baixo"></button>
+  </div>
+</main>
+<div id="end" role="dialog" aria-live="polite">
+  <div class="msg">
+    <img class="big" id="bigt" alt="">
+    <h2>Você conseguiu!</h2>
+    <p id="l1"></p><p id="l2"></p><p id="l3"></p>
+    <div class="sign" id="sg"></div>
+    <button class="again" id="again">Jogar de novo</button>
+  </div>
+</div>
+<canvas id="fx"></canvas>
+<script src="script.js"></script>
+</body>
+</html>
